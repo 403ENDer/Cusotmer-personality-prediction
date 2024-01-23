@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/static/images/0_4ndVHemtMkZoUnSW.gif");
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.logo {
+  max-width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header h1 {
+  color: white;
+  flex: 1;
+}
+
+/*nav*/
+nav {
+  float: right;
+  margin: auto;
+}
+
+nav li {
+  display: inline;
+  padding: 0 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  transition: margin-right 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+nav li:hover a {
+  font-size: 25px;
+  color: #e14a4a;
+}
+
+nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #5c5cde;
+  transition: width 0.3s ease;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+/*End of nav*/
+
+/*Header Section*/
+.hero {
+  height: 70vh;
+  position: relative;
+  z-index: 1;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration-color: #1ae142;
+  background-color: #00000082;
+}
+
+.hero .overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero .overlay p {
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  width: 50%;
+  justify-content: center;
+}
+
+.hero .overlay .btn {
+  display: inline-block;
+  background: #5c5cde;
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero .overlay .btn:hover {
+  background: #4a4aad;
+}
+/*End of  Header section*/
+
+/*About us*/
+.info-box {
+  background-color: #00000082;
+  padding: 2rem;
+  margin: 2rem 0;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.info-box h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.info-box p {
+  font-size: 1.2rem;
+  color: #fff9f9;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+/*End of About us*/
+
+/*Predictor Section */
+.predictor-section {
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #00000082;
+  max-width: 50%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.predictor-section h3 {
+  align-self: center;
+  font-size: 2rem;
+  color: #fbf7f7;
+}
+
+.predictor-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 30px;
+  align-self: center;
+  border-radius: 5px;
+}
+
+label {
+  font-size: 1rem;
+  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #0000ff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 30%;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4a4aad;
+}
+
+/*End of Predictor Section*/
+
+/*Footer*/
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/*Footer*/

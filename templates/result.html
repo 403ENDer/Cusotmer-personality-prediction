@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Personality Predictor</title>
+    <link rel="stylesheet" href="static\css\style1.css" />
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container" >
+        <img src="static\images\logo.jpg" alt="Your Logo" class="logo" />
+        <h1>Customer Personality Predictor</h1>
+        <nav>
+          <ul>
+            <li><a href="{{url_for('home')}}"">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="overlay">
+        <h1 id="result-heading">Prediction Result</h1>
+        <p id="result-content" class="typing"></p>
+        <script>
+            // Pass the prediction result from Flask to JavaScript
+            const predictionResult = "{{ result|safe }}";
+        </script>
+        <script src="/static/js/script.js"></script>
+        <button class="btn" onclick="redirectToHome()">Back to Home</button>
+      </div>
+
+      <script>
+        function redirectToHome() {
+            // Redirect to the home page using Flask's redirect function
+            window.location.href = "{{ url_for('home') }}";
+        }
+    </script>
+    </section>
+
+    <!-- End of Hero -->
+
+ 
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2023 Customer Personality Predictor. All rights reserved.
+    </footer>
+    <!-- End of Footer -->
+  </body>
+</html>

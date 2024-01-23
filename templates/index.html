@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Personality Predictor</title>
+    <link rel="stylesheet" href="static\css\style.css" />
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <img src="static\images\logo.jpg" alt="Your Logo" class="logo" />
+        <h1>Customer Personality Predictor</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#predictor">Predictor</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="overlay">
+        <h2>Discover Your Customer Personality</h2>
+        <p>
+          Get insights into your customer's personality and improve your
+          marketing strategies.
+        </p>
+        <a href="#predictor" class="btn">Start Predicting</a>
+      </div>
+    </section>
+    <!-- End of Hero -->
+
+    <!-- Info of Predictor -->
+    <section class="info-box">
+      <h3>About Customer Personality Predictor</h3>
+      <div class="container">
+        <p>
+          Our predictor utilizes cutting-edge algorithms and state-of-the-art
+          machine learning techniques to comprehensively analyze your customer's
+          behavior. By delving into intricate patterns and data, it predicts and
+          unveils various facets of their personality traits. This valuable
+          insight serves as a powerful tool for tailoring your marketing
+          campaigns with precision, enhancing customer service strategies, and
+          ultimately contributing to a significant boost in sales. The
+          sophisticated analysis performed by our predictor empowers you to make
+          informed decisions and connect with your customers on a deeper level,
+          fostering stronger and more meaningful relationships.
+        </p>
+      </div>
+    </section>
+    <!-- End of Info -->
+
+    <!-- Predictor -->
+    <section id="predictor" class="predictor-section">
+      <h3>Customer Personality Prediction Form</h3>
+      <div class="container">
+        <form
+          id="predictor-form"
+          action="{{ url_for('predict') }}"
+          method="post"
+        >
+          <label for="customer-id">Customer ID:</label>
+          <input
+            type="text"
+            id="customer-id"
+            name="customer-id"
+            placeholder="Enter Customer ID"
+            required
+          />
+
+          <label for="MntWines">Monthly Spending on Wines (INR):</label>
+          <input
+            type="number"
+            id="MntWines"
+            name="MntWines"
+            placeholder="Enter amount in INR"
+            required
+          />
+
+          <label for="MntFruits">Monthly Spending on Fruits (INR):</label>
+          <input
+            type="number"
+            id="MntFruits"
+            name="MntFruits"
+            placeholder="Enter amount in INR"
+            required
+          />
+
+          <label for="MntMeatProducts"
+            >Monthly Spending on Meat Products (INR):</label
+          >
+          <input
+            type="number"
+            id="MntMeatProducts"
+            name="MntMeatProducts"
+            placeholder="Enter amount in INR"
+            required
+          />
+
+          <label for="MntFishProducts"
+            >Monthly Spending on Fish Products (INR):</label
+          >
+          <input
+            type="number"
+            id="MntFishProducts"
+            name="MntFishProducts"
+            placeholder="Enter amount in INR"
+            required
+          />
+
+          <label for="MntSweetProducts"
+            >Monthly Spending on Sweet Products (INR):</label
+          >
+          <input
+            type="number"
+            id="MntSweetProducts"
+            name="MntSweetProducts"
+            placeholder="Enter amount in INR"
+            required
+          />
+
+          <label for="MntGoldProds"
+            >Monthly Spending on Gold Products (INR):</label
+          >
+          <input
+            type="number"
+            id="MntGoldProds"
+            name="MntGoldProds"
+            placeholder="Enter amount in INR"
+            required
+          />
+
+          <label for="NumDealsPurchases">Number of Deals Purchased:</label>
+          <input
+            type="number"
+            id="NumDealsPurchases"
+            name="NumDealsPurchases"
+            placeholder="Enter the count"
+            required
+          />
+
+          <label for="NumWebPurchases">Number of Web Purchases:</label>
+          <input
+            type="number"
+            id="NumWebPurchases"
+            name="NumWebPurchases"
+            placeholder="Enter the count"
+            required
+          />
+
+          <label for="NumCatalogPurchases">Number of Catalog Purchases:</label>
+          <input
+            type="number"
+            id="NumCatalogPurchases"
+            name="NumCatalogPurchases"
+            placeholder="Enter the count"
+            required
+          />
+
+          <label for="NumStorePurchases">Number of Store Purchases:</label>
+          <input
+            type="number"
+            id="NumStorePurchases"
+            name="NumStorePurchases"
+            placeholder="Enter the count"
+            required
+          />
+
+          <label for="NumWebVisitsMonth">Number of Web Visits per Month:</label>
+          <input
+            type="number"
+            id="NumWebVisitsMonth"
+            name="NumWebVisitsMonth"
+            placeholder="Enter the count"
+            required
+          />
+
+          <button type="submit" class="btn">Predict Personality</button>
+        </form>
+      </div>
+    </section>
+    <!-- End of predictor -->
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2023 Customer Personality Predictor. All rights reserved.
+    </footer>
+    <!-- End of Footer -->
+  </body>
+</html>

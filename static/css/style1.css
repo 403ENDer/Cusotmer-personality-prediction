@@ -1,0 +1,168 @@
+#result-container {
+  text-align: center;
+  padding: 20px;
+}
+
+#result-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+#result-content {
+  font-size: 1.2rem;
+  white-space: pre-line;
+  overflow: hidden;
+  border-right: 1px solid #000;
+  display: inline-block;
+  animation: typing 3s steps(40) 1s forwards;
+  color: white;
+  font-weight: 700;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/static/images/0_4ndVHemtMkZoUnSW.gif");
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.logo {
+  max-width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header h1 {
+  color: white;
+  flex: 1;
+}
+
+/*nav*/
+nav {
+  float: right;
+  margin: auto;
+}
+
+nav li {
+  display: inline;
+  padding: 0 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  transition: margin-right 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+nav li:hover a {
+  font-size: 25px;
+  color: #e14a4a;
+}
+
+nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #5c5cde;
+  transition: width 0.3s ease;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+/*End of nav*/
+
+/*Header Section*/
+.hero {
+  height: 70vh;
+  position: relative;
+  z-index: 1;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration-color: #1ae142;
+  background-color: #00000082;
+  margin-top: 10%;
+  margin-left: 25%;
+  padding: 20px;
+}
+
+.hero .overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero .overlay p {
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  width: 50%;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hero .overlay .btn {
+  display: inline-block;
+  background: #5c5cde;
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero .overlay .btn:hover {
+  background: #4a4aad;
+}
+/*End of  Header section*/
+
+/*Footer*/
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/*Footer*/
